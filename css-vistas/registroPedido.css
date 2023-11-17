@@ -1,0 +1,347 @@
+/* Datos de la Factura */
+
+#contenedor-principal {
+    height: auto;
+}
+
+#contenedor-principal .tituloRegistro {
+    padding: 10px 0px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.contenido-datos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+    border-radius: 0px;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.factura-info {
+    margin: 0 30px 0 30px;
+
+}
+
+.familiaInputsFactura {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.familiaInputsFactura label {
+    display: inline-block;
+    width: 200px;
+}
+
+.familiaInputsFactura input {
+    margin-left: 0px;
+    width: 200px;
+    height: 27px;
+    border-radius: 0px;
+    border: 0;
+    padding: 0px 10px 0% 10px;
+    outline: none;
+    color: white;
+    background-color: var(--green-light);
+}
+
+.cliente-info {
+    margin: 0 30px 0 30px;
+}
+
+.familiaInputsCliente {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.familiaInputsCliente label {
+    display: inline-block;
+    width: 200px;
+}
+
+.familiaInputsCliente input,
+select {
+    margin-left: 0px;
+    width: 250px;
+    height: 27px;
+    border-radius: 0px;
+    border: 0;
+    padding: 0px 10px 0% 10px;
+    outline: none;
+    color: white;
+    background-color: var(--green-light);
+}
+
+/* Responsive de los datos de la factura*/
+@media (max-width: 1200px) {
+    #contenedor-principal {
+        height: auto;
+    }
+
+    #formulario {
+        height: 100%;
+    }
+
+    .contenido-datos {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .familiaInputsFactura,
+    .familiaInputsCliente {
+        text-align: center;
+        margin: 0 2% 0 2%;
+        position: relative;
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .familiaInputsFactura label {
+        margin-top: 10px;
+    }
+
+    .familiaInputsCliente label {
+        margin-top: 10px;
+    }
+
+    .familiaInputsFactura input,
+    select {
+        width: 100%;
+    }
+
+    .familiaInputsCliente input,
+    select {
+        width: 100%;
+    }
+}
+
+/* Colocar el producto en la factura */
+
+.productos-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.familiaInputsProducto {
+    text-align: center;
+    margin: 0 30px 0 30px;
+    position: relative;
+}
+
+.familiaInputsProducto label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+
+.familiaInputsProducto input {
+    width: 250px;
+    height: 27px;
+    outline: none;
+    padding: 0px 0px 0% 15px;
+    border-radius: 0px;
+    border: 0;
+    background-color: var(--green-light);
+    color: white;
+}
+
+.btnAgregar {
+    display: flex;
+    justify-content: center;
+    top: 10px;
+    padding-top: 10px;
+}
+
+::placeholder,
+select {
+    color: white;
+}
+
+.btnAgregar button {
+    width: 150px;
+    height: 27px;
+    outline: none;
+    border-radius: 0px;
+    border: 0;
+    background-color: var(--green-light);
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive de los Productos de la factura */
+@media (max-width: 1200px) {
+
+    .productos-info {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-bottom: 0px;
+        padding: 0;
+    }
+
+    .familiaInputsProducto {
+        text-align: center;
+        margin: 0 2% 0 2%;
+        position: relative;
+        flex-basis: 100%;
+        width: 80%;
+    }
+
+    .familiaInputsProducto label {
+        margin-top: 10px;
+    }
+
+    .familiaInputsProducto input {
+        width: 100%;
+    }
+}
+
+.descripcion-info {
+    width: min(1200px, 100% - 3rem);
+    margin-inline: auto;
+    font-size: 15px;
+}
+
+/* Tabla de Registros Clientes */
+.wrapper {
+    width: min(1200px, 100% - 3rem);
+    margin-inline: auto;
+    font-size: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 1rem;
+}
+
+th {
+    text-align: left;
+    background-color: var(--sidebar-color);
+    color: white;
+}
+
+tr:nth-of-type(2n) {
+    background-color: var(--green-light-2);
+}
+
+
+.productos-info div {
+    margin-bottom: 10px;
+}
+
+
+.delete-btn {
+    color: black;
+    cursor: pointer;
+}
+
+.btnRegistrar {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.btnRegistrar input {
+    height: 27px;
+    outline: none;
+    padding: 0px 5px 0% 5px;
+    border-radius: 0px;
+    border: 0;
+    background-color: #388E3C;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    th {
+        display: none;
+    }
+
+    td {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 15ch auto;
+        padding: 0.5rem 1rem;
+    }
+
+    td:first-child {
+        padding-top: 1rem;
+    }
+
+    td:last-child {
+        padding-bottom: 2rem;
+    }
+
+    td::before {
+        content: attr(data-cell) ": ";
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+}
+
+/*css para los botones dentro de la tabla donde se encuentran los ingredientes registrados en la DB*/
+
+#tablaRegistroProductos button{
+    background-color: #388E3C;
+    border: none;
+    width: 50%;
+    color: white;
+    text-align: center;
+    border-radius: 0px;
+}
+
+/*css para el input de la cantidad*/
+#tablaRegistroProductos input{
+    background-color: #388E3C;
+    border: none;
+    width: 50%;
+    color: white;
+    text-align: center;
+    border-radius: 0px;
+    padding: 5px;
+    margin: auto;
+}
+
+button{
+    background-color: #388E3C;
+    border-radius: 0px;
+    box-shadow: none;
+    border-color: #388E3C;
+    color: white;
+}
+
+button i{
+    color: white;
+}
+
+.button{
+    width: 50px;
+}

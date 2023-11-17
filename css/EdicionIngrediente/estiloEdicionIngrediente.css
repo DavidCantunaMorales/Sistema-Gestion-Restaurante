@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --body-color: #9B27B00D;
+    --sidebar-color: #388E3C;
+    --primary-color: white;
+    --primary-color-light: #9B27B00D;
+    --toggle-color: #DDDDDD;
+    --text-color: white;
+    --green-light: #4CAF50;
+    --green-light-2: #C8E6C9;
+
+    --color-white: #fff;
+    --color-background: #f6f6f9;
+
+    --trans-03: all 0.2s ease;
+    --trans-04: all 0.3s ease;
+    --trans-05: all 0.4s ease;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--trans-05);
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-background);
+    transition: var(--trans-05);
+}
+
+.home .text {
+    padding: 12px 50px;
+    background-color: beige;
+}
+
+
+/* Contenido del formulario */
+#contenedor-principal {
+    height: auto;
+    width: 40%;
+}
+
+#contenedor-principal .tituloRegistro {
+    padding: 50px 0px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#formulario {
+    height: 20%;
+    border-radius: 0px;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding-bottom: 15px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 0;
+}
+
+.familiaInputs {
+    text-align: center;
+    margin: 0 30px 0 30px;
+    position: relative;
+    padding-top: 20px;
+}
+
+.familiaInputs label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.familiaInputs input,
+select {
+    width: 400px;
+    height: 27px;
+    outline: none;
+    padding: 0px 0px 0% 45px;
+    border-radius: 0px;
+    border: 0;
+    background-color: var(--green-light);
+    color: white;
+}
+
+.btnRegistrar {
+    display: flex;
+    justify-content: center;
+    top: 10px;
+    padding-top: 25px;
+}
+
+.btnRegistrar input {
+    width: 150px;
+    height: 27px;
+    outline: none;
+    border-radius: 0px;
+    border: 0;
+    background-color: var(--green-light);
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+.familiaInputs .iconR {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    left: 5px;
+    top: 90%;
+    transform: translateY(-55%);
+    font-size: 20px;
+}
+
+@media (max-width: 1450px) {
+    #contenedor-principal {
+        height: auto;
+    }
+
+    #formulario {
+        height: 100%;
+    }
+
+    .input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-bottom: 0px;
+        padding: 0;
+    }
+
+    .familiaInputs {
+        text-align: center;
+        margin: 0 2% 0 2%;
+        position: relative;
+        flex-basis: 100%;
+        width: 80%;
+    }
+
+    .familiaInputs label {
+        margin-top: 10px;
+    }
+
+    .familiaInputs input,
+    select {
+        width: 100%;
+    }
+}
+
+/*modifica el color de los iconos*/
+i {
+    color: white;
+}
+
+/*Modifica el color de las letras del plaaceholder*/
+input::placeholder {
+    color: white;
+    /* Color deseado para el texto del placeholder */
+}
+
+.material-icons {
+    color: #388E3C;
+}

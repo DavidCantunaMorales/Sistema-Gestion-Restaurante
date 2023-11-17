@@ -1,0 +1,319 @@
+
+/* Contenido del formulario */
+
+#contenedor-principal {
+    height: auto;
+}
+
+#contenedor-principal .tituloRegistro {
+    padding: 10px 0px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#formulario {
+    height: 30%;
+    border-radius: 0px;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding-bottom: 15px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.familiaInputs {
+    text-align: center;
+    margin: 0 30px 0 30px;
+    position: relative;
+}
+
+.familiaInputs label {
+    display: block;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.familiaInputs input,
+select {
+    width: 275px;
+    height: 27px;
+    outline: none;
+    padding: 0px 0px 0% 45px;
+    border-radius: 0px;
+    border: 0;
+    background-color: var(--green-light);
+    color: white;
+}
+
+::placeholder{
+    color: white;
+    background-color: var(--green-light);
+}
+
+.btnRegistrar {
+    display: flex;
+    justify-content: center;
+    top: 10px;
+    padding-top: 10px;
+}
+
+.btnRegistrar input {
+    width: 100px;
+    height: 27px;
+    outline: none;
+    border-radius: 0px;
+    border: 0;
+    background-color: var(--green-light);
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+}
+
+.familiaInputs .iconR {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    left: 5px;
+    top: 90%;
+    transform: translateY(-55%);
+    font-size: 20px;
+}
+
+/* Responvsive del formulario */
+@media (max-width: 1200px) {
+    #contenedor-principal {
+        height: auto;
+    }
+
+    #formulario {
+        height: 100%;
+    }
+
+    .input-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-bottom: 0px;
+        padding: 0;
+    }
+
+    .familiaInputs {
+        text-align: center;
+        margin: 0 2% 0 2%;
+        position: relative;
+        flex-basis: 100%;
+        width: 80%;
+    }
+
+    .familiaInputs label {
+        margin-top: 10px;
+    }
+
+    .familiaInputs input,
+    select {
+        width: 100%;
+    }
+}
+
+
+/* Tabla de Registros Clientes */
+.wrapper {
+    width: min(1200px, 100% - 3rem);
+    margin-inline: auto;
+    font-size: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+#contenedor-busqueda {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+#busqueda {
+    text-align: center;
+    margin: 0 30px 0 30px;
+    position: relative;
+}
+
+#busqueda label {
+    padding-right: 15px;
+}
+
+#busqueda i {
+    position: absolute;
+    left: 150px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+#buscarProducto-input {
+    height: 27px;
+    padding-left: 40px;
+    border-radius: 0px;
+    border: 0;
+    outline: none;
+    width: 350px;
+    background-color: var(--green-light);
+    color: white;
+}
+
+/* Responsive del buscar */
+@media (max-width: 1200px) {
+    #contenedor-principal {
+        height: auto;
+    }
+
+    #contenedor-busqueda {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-bottom: 0px;
+        padding: 0;
+    }
+
+    #busqueda {
+        text-align: center;
+        margin: 0 2% 0 2%;
+        position: relative;
+        flex-basis: 100%;
+        width: 80%;
+    }
+
+    #busqueda label {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #busqueda i {
+        display: none;
+    }
+
+    #buscarProducto-input {
+        padding: 5px;
+        margin-right: 20px;
+        width: 100%;
+    }
+}
+
+td,
+th {
+    padding: 1rem;
+}
+
+th {
+    text-align: left;
+    background-color: var(--sidebar-color);
+    color: white;
+}
+
+tr:nth-of-type(2n) {
+    background-color: var(--green-light-2);
+}
+
+/*Responsive de la tabla */
+
+@media (max-width: 1200px) {
+    th {
+        display: none;
+    }
+
+    td {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0.5rem 1rem;
+    }
+
+    td:first-child {
+        padding-top: 1rem;
+    }
+
+    td:last-child {
+        padding-bottom: 2rem;
+    }
+
+    td::before {
+        content: attr(data-cell) ": ";
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+    .button-add{
+        width: 100%;
+    }
+    .button-add{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .button-sum{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+i{
+    color: white;
+}
+
+
+/*css para los botones dentro de la tabla donde se encuentran los ingredientes registrados en la DB*/
+
+#tablaRegistroProductos button{
+    background-color: #388E3C;
+    border: none;
+    width: 50%;
+    color: white;
+    text-align: center;
+    border-radius: 0px;
+}
+
+/*css para el input de la cantidad*/
+#tablaRegistroProductos input{
+    background-color: #388E3C;
+    border: none;
+    width: 50%;
+    color: white;
+    text-align: center;
+    border-radius: 0px;
+    padding: 5px;
+    margin: auto;
+}
+
+button{
+    background-color: #388E3C;
+    border-radius:  0px;
+    box-shadow: none;
+    border-color: #388E3C;
+    color: white;
+}
+
+button i{
+    color: white;
+}
+
+.button{
+    width: 50px;
+}

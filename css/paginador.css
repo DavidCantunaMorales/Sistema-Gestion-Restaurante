@@ -1,0 +1,31 @@
+.paginador ul {
+  padding: 0px 0px 15px 0px;
+  list-style: none;
+  background: #fff;
+  display: -webkit-box;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.paginador a,
+.paginaSeleccionada {
+  color: #388E3C;
+  border: 1px solid #ddd;
+  padding: 5px;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  width: 35px;
+}
+
+.paginador a:hover {
+  background: #ddd;
+}
+
+.paginaSeleccionada {
+  color: #fff;
+  background: #388E3C;
+  border: 1px solid #388E3C;
+}

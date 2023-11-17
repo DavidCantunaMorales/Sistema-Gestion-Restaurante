@@ -1,0 +1,154 @@
+
+/* Tabla de Registros Product */
+.wrapper {
+    width: min(1200px, 100% - 3rem);
+    margin-inline: auto;
+    font-size: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+#contenedor-busqueda {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+#busqueda {
+    text-align: center;
+    margin: 0 30px 0 30px;
+    position: relative;
+}
+
+#busqueda label {
+    padding-right: 15px;
+}
+
+#busqueda i {
+    position: absolute;
+    left: 33%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+#buscarProducto-input {
+    height: 27px;
+    padding-left: 40px;
+    border-radius: 25px;
+    border: 0;
+    outline: none;
+    width: 350px;
+    background-color: var(--green-light);
+    color: white;
+}
+
+/* Responsive del buscar */
+@media (max-width: 1200px) {
+    #contenedor-principal {
+        height: auto;
+    }
+
+    #contenedor-busqueda {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        padding-bottom: 0px;
+        padding: 0;
+    }
+
+    #busqueda {
+        text-align: center;
+        margin: 0 2% 0 2%;
+        position: relative;
+        flex-basis: 100%;
+        width: 80%;
+    }
+
+    #busqueda label {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    #busqueda i {
+        display: none;
+    }
+
+    #buscarProducto-input {
+        padding: 5px;
+        margin-right: 20px;
+        width: 100%;
+    }
+}
+
+td,
+th {
+    padding: 1rem;
+}
+
+th {
+    text-align: left;
+    background-color: var(--sidebar-color);
+    color: white;
+}
+
+tr:nth-of-type(2n) {
+    background: var(--green-light-2);
+}
+
+/*Responsive de la tabla */
+
+@media (max-width: 1200px) {
+    th {
+        display: none;
+    }
+
+    td {
+        display: grid;
+        gap: 0.5rem;
+        grid-template-columns: 15ch auto;
+        padding: 0.5rem 1rem;
+    }
+
+    td:first-child {
+        padding-top: 1rem;
+    }
+
+    td:last-child {
+        padding-bottom: 2rem;
+    }
+
+    td::before {
+        content: attr(data-cell) ": ";
+        font-weight: 700;
+        text-transform: capitalize;
+    }
+}
+
+/*modifica el color de los iconos*/
+i {
+    color: white;
+}
+
+/*Modifica el color de las letras del plaaceholder*/
+input::placeholder {
+    color: white;
+    /* Color deseado para el texto del placeholder */
+}
+
+.material-icons {
+    color: #388E3C;
+}
+
+
